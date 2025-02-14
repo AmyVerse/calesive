@@ -8,7 +8,11 @@ import {
   SignedIn,
   SignedOut,
   UserButton,
-} from '@clerk/nextjs'
+} from '@clerk/nextjs';
+import Link from "next/link";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,17 +38,25 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        ><header className="flex justify-end items-center p-4 gap-4 h-16">
-            <SignedOut>
-              <SignInButton />
-              <SignUpButton />
-            </SignedOut>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-          </header>
-          {children}
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          <div className="flex h-screen">
+            {/* Sidebar (Left Pane) */}
+            <aside className="w-64 bg-gray-800 text-white p-4 hidden sm:block"><Sidebar /></aside>
+
+            {/* Main Content Area */}
+            <div className="flex-1 flex flex-col">
+              {/* Top Navbar */}
+              <header><Navbar /></header>
+
+              {/* Dynamic Page Content (Calendar, About, etc.) */}
+              <main className="flex-1 pt-16">{children}</main>
+
+              {/* Footer */}
+              <footer className="bg-gray-900 text-white p-4">
+                <Footer />
+              </footer>
+            </div>
+          </div>
         </body>
       </html>
     </ClerkProvider>
