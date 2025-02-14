@@ -16,6 +16,17 @@ export default function MyCalendar() {
         { title: "Event 1", start: "2025-02-20" },
         { title: "Event 2", start: "2025-02-22" },
       ]}
+      headerToolbar={{
+        left: "prev,next today",
+        center: "title",
+        right: "dayGridMonth,timeGridWeek,timeGridDay",
+      }}
+      eventClick={(info) => {
+        alert(`Event: ${info.event.title}`);
+      }}
+      dateClick={(info) => {
+        alert(`Clicked on: ${info.dateStr}`);
+      }}
     />
   );
 }
