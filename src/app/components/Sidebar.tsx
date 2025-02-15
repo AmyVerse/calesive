@@ -19,21 +19,26 @@ export default function Sidebar() {
             <X className="w-6 h-6" />
           </button>
         </div>
-        <nav className="mt-10 px-4  content-center">
+        <nav className="mt-28 px-8 content-center">
           <ul className="space-y-4">
             <li>
-              <Link href="/dashboard" className="block py-2 px-3 rounded hover:bg-gray-700">
-                Dashboard
+              <Link href="/dashboard" className="flex hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                Aceadmic
               </Link>
             </li>
             <li>
-              <Link href="/profile" className="block py-2 px-3 rounded hover:bg-gray-700">
-                Profile
+              <Link href="/profile" className="flex hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                Events
               </Link>
             </li>
             <li>
-              <Link href="/settings" className="block py-2 px-3 rounded hover:bg-gray-700">
-                Settings
+              <Link href="/settings" className="flex hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                Upcoming
+              </Link>
+            </li>
+            <li>
+              <Link href="/settings" className="flex hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">
+                Bookmarked
               </Link>
             </li>
           </ul>
