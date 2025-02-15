@@ -30,10 +30,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en" className={poppins.variable}>
-        <body className="bg-[#040712] antialiased min-h-screen font-poppins">
+        <body className="dark:bg-[#040712] bg-gray-300 antialiased min-h-screen font-poppins">
           <div className="flex h-screen overflow-hidden">
             {/* Sidebar (Left Pane) */}
-            <aside className="hidden md:flex md:flex-col w-64 bg-gray-900 text-white">
+            <aside className="hidden md:flex md:flex-col w-64 dark:bg-gray-900 text-white">
               <Sidebar />
             </aside>
 
@@ -50,7 +50,7 @@ export default function RootLayout({
               </main>
 
               {/* Footer */}
-              <footer className="bg-gray-900 text-white p-4">
+              <footer className="dark:bg-gray-800 text-white p-4">
                 <Footer />
               </footer>
             </div>

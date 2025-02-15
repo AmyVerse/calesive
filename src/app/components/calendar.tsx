@@ -6,16 +6,9 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 
 export default function MyCalendar() {
-  const handleEventClick = (info: any) => {
-    alert(`Event: ${info.event.title}`);
-  };
-
-  const handleDateClick = (info: any) => {
-    alert(`Clicked on: ${info.dateStr}`);
-  };
 
   return (
-    <div className="p-4 bg-[#070b1a] rounded-lg shadow-md">
+    <div className="p-4 dark:bg-[#070b1a] bg-white rounded-lg shadow-md">
       <FullCalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView="dayGridMonth"
@@ -28,9 +21,9 @@ export default function MyCalendar() {
           day: 'Day',
         }}
         events={[
-          { title: "Kshitiz", start: "2025-02-01", color: "#ff6e00" },
-          { title: "Kshitiz", start: "2025-02-02", color: "#ff6e00" },
-          { title: "Prize Distribution Ceremony - Kshitiz", start: "2025-02-14", color: "#ff6e00"},
+          { title: "Kshitij", start: "2025-02-01", color: "#ff6e00" },
+          { title: "Kshitij", start: "2025-02-02", color: "#ff6e00" },
+          { title: "Prize Distribution Ceremony - Kshitij", start: "2025-02-14", color: "#ff6e00"},
           { title: "Demo Days", start: "2025-02-15", url: "https://unstop.com/p/iiitn-demo-days-2-crispr-iiitn-1396408" },
           { title: "Abhivyakti", start: "2025-02-27", color: "#ff0000", url: "https://www.abhivyaktifest.in/" },
           { title: "Abhivyakti", start: "2025-02-28", color: "#ff0000", url: "https://www.abhivyaktifest.in/" },
